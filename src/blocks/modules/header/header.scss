@@ -1,0 +1,55 @@
+header {
+  width: 100%;
+  padding: 20px 0;
+
+  .container {
+    @include container();
+  }
+
+  .row {
+    @include row-flex();
+
+    position: relative;
+  }
+
+  .logo {
+    @include col();
+    @include size(3);
+    @include shift-right(2);
+  }
+
+  .menu {
+    @include col();
+    @include size(6);
+
+    &__list {
+      @include row-flex();
+      align-items: stretch;
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+
+      margin-left: 10px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    &__link {
+      text-transform: uppercase;
+    }
+  }
+
+  .find {
+    @include col();
+    @include size(1);
+  }
+
+  .search {
+    display: none;
+    position: absolute;
+  }
+}
